@@ -3,8 +3,8 @@ This repository contains an automated test script for verifying the Message API 
 
 ### Prerequisites
 Before running the test script, ensure you have the following installed on your machine:
-	Node.js
-	npm (Node Package Manager)
+	```Node.js
+	npm (Node Package Manager)```
 
 ### Installation
 Clone the repository to your local machine:
@@ -16,14 +16,14 @@ Clone the repository to your local machine:
 
 ### Running the Service Locally
 Ensure Node.js is installed on your machine. Navigate to the repository in a terminal and run the following commands, in order:
-	npm install 
+	```npm install 
 	npm run-script build 
-	ts-node src/index.ts
+	ts-node src/index.ts```
 The service will now be running locally, and you can access the endpoints at http://localhost:3000.
 
 ### Running the Tests
 Ensure the service is running locally on http://localhost:3000. Execute the tests using the following command:
-	npm test
+	```npm test```
 
 ### Test Cases
 The following test cases are covered in the script:
@@ -65,5 +65,5 @@ Two users have been created using Postman for testing purposes. The Postman coll
 
 ### Additional Notes
 The tests are located in the test folder. Ensure the service is running locally before executing the tests.
-Updating the messages API did not work as expected in given Postman collection
-When message id is not passed in the delete message api, it is returning error in the HTML format
+Updating the messages API did not work as expected in the given Postman collection
+When message-id is not passed in the delete message API, it returns an error in the HTML format
