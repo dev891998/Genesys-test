@@ -3,8 +3,10 @@ This repository contains an automated test script for verifying the Message API 
 
 ### Prerequisites
 Before running the test script, ensure you have the following installed on your machine:
-	```Node.js
-	npm (Node Package Manager)```
+```
+	Node.js
+	npm (Node Package Manager)
+```
 
 ### Installation
 Clone the repository to your local machine:
@@ -16,14 +18,18 @@ Clone the repository to your local machine:
 
 ### Running the Service Locally
 Ensure Node.js is installed on your machine. Navigate to the repository in a terminal and run the following commands, in order:
-	```npm install 
+```
+	npm install 
 	npm run-script build 
-	ts-node src/index.ts```
+	ts-node src/index.ts
+```
 The service will now be running locally, and you can access the endpoints at http://localhost:3000.
 
 ### Running the Tests
 Ensure the service is running locally on http://localhost:3000. Execute the tests using the following command:
-	```npm test```
+```
+	npm test
+```
 
 ### Test Cases
 The following test cases are covered in the script:
@@ -50,9 +56,9 @@ Creating a Message Without 'From', 'To', and 'Message' Properties: Verifies the 
 
 Getting All Messages Without 'From' and 'To' Properties: Verifies the response when trying to get all messages without specifying from and to properties.
 
-Getting Messages with 'From' Property Only: Verifies the response when trying to get messages using only the from property.
+Getting Messages with 'From' Property Only: Verifies the response when getting messages using only the from property.
 
-Getting Messages with 'To' Property Only: Verifies the response when trying to get messages using only the to property.
+Getting Messages with 'To' Property Only: Verifies the response when getting messages using only the to property.
 
 Deleting a Message by ID: Verifies that a message can be deleted by its ID.
 
