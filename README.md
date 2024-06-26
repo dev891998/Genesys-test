@@ -13,8 +13,10 @@ Clone the repository to your local machine:
 	git clone https://github.com/dev891998/Genesys-test.git
 
 ### Install the required dependencies:
+```
 	npm install -g ts-node 
 	npm install --save-dev jest supertest
+```
 
 ### Running the Service Locally
 Ensure Node.js is installed on your machine. Navigate to the repository in a terminal and run the following commands, in order:
