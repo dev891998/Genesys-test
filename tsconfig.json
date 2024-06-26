@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "paths": { "*": ["types/*"] },
+        "resolveJsonModule": true,
+        "module": "commonjs",
+        "target": "es6",
+        "strict": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "noUnusedLocals": true,
+        "noEmitOnError": true,
+        "noUnusedParameters": true,
+        "noImplicitAny":true,
+        "skipLibCheck": true,
+        "lib": [
+            "es2016",
+            "es2017"
+        ]
+    },
+    "include": [
+        "src",
+    ]
+}

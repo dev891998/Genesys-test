@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coding Challenge</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+        .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+        </style>
+
+
+
+    </head>
+    <body class="container .bg-body">
+        <div class="vscode-body vscode-light" >
+
+            <h5 class="mt-5">
+                Imagine we are making a private messaging service for our new
+                company
+                Perry’s Summer Vacation Goods and Services. We need you to
+                create an
+                automated test script that verifies the <strong>Message API</strong>,
+                not User API.</h5>
+            <br>
+            <br>
+
+            <h2 id="requirements-of-perrys-summer-vacation-goods-and-services">Requirements
+                of Perry’s Summer Vacation Goods and Services</h2>
+            <br>
+            <h4>Develop a scalable API to be able to handle the many messages this
+                company
+                is going to handle</h4>
+            <br>
+            <ul>
+                <li>
+                    <p>The application should be a REST API (No need for any
+                        kind of
+                        UI)</p>
+                </li>
+                <li>
+                    <p>The application should be ready to run in the cloud or in
+                        a
+                        container.</p>
+                </li>
+                <li>
+                    <p>The application data must be persisted in a database of
+                        some
+                        type.</p>
+                </li>
+                <li>
+                    <p>The application must be able to create and get users.</p>
+                    <ul>
+                        <li>We do not expect you do handle any kind of
+                            authentication for users.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>The application must allow users to send a message to one
+                        other user.</p>
+                    <ul>
+                        <li>No need to consider group chats.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>The application must allow editing and deleting messages.</p>
+                </li>
+                <li>
+                    <p>The application must be able to get all the messages sent
+                        between two users.</p>
+                </li>
+            </ul>
+
+            <br>
+
+            <h3 id="apis-your-developer-created">APIs your developer created:</h3>
+            <p><strong>User Model</strong></p>
+            <pre><code><code><div>{
+    &quot;name&quot;: &quot;first last&quot;,
+    &quot;id&quot;: &quot;uuid-of-user&quot;
+}
+</div></code></code></pre>
+            <ul>
+                <li>POST /users
+                    <ul>
+                        <li>Create a user</li>
+                    </ul>
+                </li>
+                <li>GET /users
+                    <ul>
+                        <li>list all users</li>
+                    </ul>
+                </li>
+                <li>GET /users/:id
+                    <ul>
+                        <li>Get a user by id</li>
+                    </ul>
+                </li>
+                <li>PUT /users/:id
+                    <ul>
+                        <li>Update a user by id</li>
+                    </ul>
+                </li>
+                <li>DELETE /users/:id
+                    <ul>
+                        <li>Delete a user by id</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Message Model</strong></p>
+            <pre><code><code><div>{
+    &quot;from&quot;: {
+        &quot;id&quot;: &quot;fromUserId&quot;
+    },
+    &quot;to&quot;: {
+        &quot;id&quot;: &quot;toUserId&quot;
+    },
+    &quot;message&quot;: &quot;text content of the message&quot;,
+    &quot;id&quot;: &quot;uuid-of-message&quot;,
+    &quot;time&quot;: &quot;2021-03-04T00:54:30.288Z&quot;
+}
+</div></code></code></pre>
+            <ul>
+                <li>POST /message
+                    <ul>
+                        <li>Create a message</li>
+                    </ul>
+                </li>
+                <li>GET /message?from=fromUserId&amp;to=toUserId
+                    <ul>
+                        <li>Get all the messages sent between two users.</li>
+                    </ul>
+                </li>
+                <li>GET /message/:id
+                    <ul>
+                        <li>Get a message by id</li>
+                    </ul>
+                </li>
+                <li>PUT /message/:id
+                    <ul>
+                        <li>Update a message by id</li>
+                    </ul>
+                </li>
+                <li>DELETE /message/:id
+                    <ul>
+                        <li>Delete a message by id</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+
+            <h3
+                id="the-developer-has-provided-some-information-that-might-helpful">The
+                developer has provided some information that might helpful</h3>
+            <ul>
+                <li>Postman collection <a
+                        href="https://app.getpostman.com/run-collection/11432960-97511c69-526e-4650-8626-6a939d59a17d"><img
+                            src="https://run.pstmn.io/button.svg" alt="Postman
+                            collection"></a></li>
+                <li>There's no pre-existing data in the application, you need to
+                    create users and messages using the provided requests.</li>
+            </ul>
+            <br>
+
+            <h3 id="technical-requirements-for-your-test-script">Technical
+                requirements for your test script:</h3>
+            <ul>
+                <li>Test the <strong>Message API</strong> to see if it meets the
+                    requirements.
+                    <ul>
+                        <li>You do not need to test the User API</li>
+                    </ul>
+                </li>
+                <li>Your test script needs to be automated</li>
+                <li>We do not expect that you spend more than 8 hours on this
+                    challenge.</li>
+                <li>Use what language and testing framework you are comfortable
+                    with, such as JUnit or Jest.</li>
+                <li>The source code must be shared in a public repository
+                    (Github,
+                    Bitbucket, etc).</li>
+                <li>Write a README file on how to run you test script and a
+                    brief
+                    description of what you've tested (and any bugs you find).</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </body>
+</html>
